@@ -51,5 +51,20 @@ Press `S+1' to enter `1' instead, etc."
  ("(" ?9)
  (")" ?0))
 
+(defvar programming-mode--last-input-method
+  nil
+  "Last input method as a locale variable, shall be modified by
+ `programming-mode-toggle-programming-mode'")
+
+;;;###autoload
+(defun programming-mode-toggle-programming-mode ()
+  "Toggle programming-mode and last nearest input method."
+  (interactive)
+  (make-local-variable 'programming-mode--last-input-method)
+  (if (eql default-input-method 'programming-mode)
+      (set-input-method programming-mode--last-input-method)
+    (setq programming-mode--last-input-method default-input-method)
+    (set-input-method 'programming-mode)))
+
 (provide 'programming-mode)
 ;;; programming-mode.el ends here

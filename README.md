@@ -22,3 +22,6 @@ If you don't use other input methods, just put the code below into your config f
 ``` emacs-lisp
 (set-input-method 'programming-mode)
 ```
+
+If you use other input method, you can switch between it and programming-mode by function
+`programming-mode-toggle-programming-mode`.
