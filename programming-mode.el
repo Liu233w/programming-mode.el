@@ -6,7 +6,6 @@
 ;; URL: https://github.com/Liu233w/programming-mode.el
 ;; Version: 0.1.0
 ;; Keywords: input-method keyboard
-;; Package-Requires: (quail)
 
 ;; This file is not part of GNU Emacs.
 
