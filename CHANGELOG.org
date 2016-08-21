@@ -1,0 +1,9 @@
+* Release 0.1.X
+** 0.1.1 (2016/08/21)
+- Add a function programming-mode-toggle-programming-mode
+- Add a veriable programming-mode--last-input-method
+
+Now you can switch between programming-mode and other im.
+
+** 0.1.0 (2016/08/21)
+Add all files
