@@ -4,7 +4,7 @@
 
 ;; Author: Liu233w <wwwlsmcom@outlook.com>
 ;; URL: https://github.com/Liu233w/programming-mode.el
-;; Version: 0.1.1
+;; Version: 0.1.2
 ;; Keywords: input-method keyboard
 
 ;; This file is not part of GNU Emacs.
@@ -13,6 +13,8 @@
 
 ;; It's a input method to exchange your number line with the mark above it.
 ;; For example, when you press `1', `!' will be entered.
+;; If `!' was binding to function other than `self-insert-command', it will be
+;; called.  But if Emacs have evil installed, it's only worked at insert-state.
 ;; Pressing `S+1' will enter `1', etc.
 ;; It's a input method, so it's only worked on insert mode in current buffer,
 ;; so chords like `C-x 2' will act as normal, and the key won't be translated
@@ -25,8 +27,8 @@
 
 (quail-define-package
  "programming-mode" "English" "&" t
- "Press `1' to enter `!',
-Press `S+1' to enter `1' instead, etc."
+ "Press `1' will behave like press `!'.
+Press `S+1' as `1' instead, etc."
  nil t t t t nil nil nil nil nil t)
 
 (quail-define-rules
@@ -53,8 +55,9 @@ Press `S+1' to enter `1' instead, etc."
 
 (defvar programming-mode--last-input-method
   nil
-  "Last input method as a locale variable, shall be modified by
- `programming-mode-toggle-programming-mode'")
+  "Last input method.
+Should be as a locale variavle and be modified by
+`programming-mode-toggle-programming-mode'")
 
 ;;;###autoload
 (defun programming-mode-toggle-programming-mode ()

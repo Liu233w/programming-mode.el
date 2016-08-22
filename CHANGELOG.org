@@ -1,4 +1,7 @@
 * Release 0.1.X
+** 0.1.2 (2016/08/22)
+- Add more introduction.
+
 ** 0.1.1 (2016/08/21)
 - Add a function programming-mode-toggle-programming-mode
 - Add a veriable programming-mode--last-input-method
