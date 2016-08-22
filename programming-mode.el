@@ -1,13 +1,24 @@
-;;; programming-mode.el --- Input method to exchange your number line with the mark above it.
+;;; programming-mode.el --- Exchange your number line with the mark above it.
 
-;; Copyright © 2016 Liu233w
+;; Copyright (C) 2016 Liu233w
 
 ;; Author: Liu233w <wwwlsmcom@outlook.com>
 ;; URL: https://github.com/Liu233w/programming-mode.el
 ;; Version: 0.1.2
-;; Keywords: input-method keyboard
+;; Keywords: convenience
 
-;; This file is not part of GNU Emacs.
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
@@ -20,9 +31,8 @@
 ;; so chords like `C-x 2' will act as normal, and the key won't be translated
 ;; in minibuffer.
 
-;;; License: GPLv3
-
 ;;; Code:
+
 (require 'quail)
 
 (quail-define-package
